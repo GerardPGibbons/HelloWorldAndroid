@@ -13,17 +13,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        TextView text = findViewById(R.id.textView);
 
         Button button = findViewById(R.id.button);
-        View.OnClickListener click = new View.OnClickListener() {
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                TextView text = findViewById((R.id.textView));
+                TextView text = findViewById(R.id.textView);
                 text.setText(("You have clicked the button"));
             }
-        };
+        });
     };
 }
 //commit 2
